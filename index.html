@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        Hola {{nombre}}
+
+        <hr>
+
+        Hola 2 {{nombre}}
+    </div>
+
+    <div id="app2">
+        Hola {{nombre}}
+
+        <hr>
+
+        Hola 2 {{nombre}}
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        //data, methodos, propiedades, mounted, created, computer, watch
+
+        const holaMundo = {
+            data() {
+                return {
+                    nombre: 'Richard',
+                    apellido: 'Campos',
+                    edad: '29',
+                    direccion: 'Calle falsa 123',
+                    telefono: '123456789',
+                    email: 'richardsjcb@gmail.com'
+                }
+            }
+        }
+
+        const holamundo2 = {
+            data() {
+                return {
+                    nombre: 'Leslie',
+                    apellido: 'Campos',
+                    edad: '29',
+                    direccion: 'Calle falsa 123',
+                    telefono: '123456789',
+                    email: ''
+                }
+            }
+        }
+
+        let vue2 = Vue.createApp(holaMundo).mount('#app')
+        let vue1 = Vue.createApp(holamundo2).mount('#app2')
+    </script>
+
+</body>
+
+</html>

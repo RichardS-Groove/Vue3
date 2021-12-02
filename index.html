@@ -14,10 +14,13 @@
 
     <div id="app">
 
-        <h1 :class="user.classValue">
-            {{ user.name }}
-            {{ user.age }}
-        </h1>
+        <h1 v-if="user.age >= 18" class="good">Eres Mayor de edad</h1>
+        <h1 v-else= "user.age <= 18" class="error">Eres menor de edad</h1>
+
+        <!--  <h1 :class="user.classValue">
+            {{ user.age > 18 ? user.classValue = "good" : user.classValue = "error" }}
+            {{ user.name}}
+        </h1>-->
 
 
         <!-- <h1>{{user.title}}</h1>

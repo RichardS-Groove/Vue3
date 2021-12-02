@@ -6,59 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+
     <div id="app">
-        Hola {{nombre}}
 
-        <hr>
+        <h1 :class="user.classValue">
+            {{ user.name }}
+            {{ user.age }}
+        </h1>
 
-        Hola 2 {{nombre}}
+
+        <!-- <h1>{{user.title}}</h1>
+        <h2>{{user.name}}</h2>
+        <h2>{{user.age}}</h2>
+
+        <h2>{{person.firstName}}</h2>
+        <h2>{{user.age < 18? "No puedes pasar" : "Puedes pasar" }}</h2>
+                <h2>{{user.movies[0]}}</h2>
+                <hr>
+                <a v-bind:href="user.url" target="_blank">Git Hub</a>
+                v-bind:href="user.url", Vue v-bind es una ruta y lo que contenta lo concat en llaves
+                <br>
+                <a v-bind:href="user.website" target="_blank">Google</a>
+                <hr>
+                 :src="user.picture", los : hace referencia a v-bind
+                <img :src="user.picture" width="300" height="300"> -->
     </div>
 
-    <div id="app2">
-        Hola {{nombre}}
+    <script src="./script.js"></script>
 
-        <hr>
-
-        Hola 2 {{nombre}}
-    </div>
-
-    <script src="https://unpkg.com/vue@next"></script>
     <script>
-        //data, methodos, propiedades, mounted, created, computer, watch
-
-        const holaMundo = {
-            data() {
-                return {
-                    nombre: 'Richard',
-                    apellido: 'Campos',
-                    edad: '29',
-                    direccion: 'Calle falsa 123',
-                    telefono: '123456789',
-                    email: 'richardsjcb@gmail.com'
-                }
-            }
-        }
-
-        const holamundo2 = {
-            data() {
-                return {
-                    nombre: 'Leslie',
-                    apellido: 'Campos',
-                    edad: '29',
-                    direccion: 'Calle falsa 123',
-                    telefono: '123456789',
-                    email: ''
-                }
-            }
-        }
-
-        let vue2 = Vue.createApp(holaMundo).mount('#app')
-        let vue1 = Vue.createApp(holamundo2).mount('#app2')
+        const mountApp = app.mount('#app');
     </script>
-
 </body>
 
 </html>

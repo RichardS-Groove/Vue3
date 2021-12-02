@@ -14,8 +14,12 @@
 
     <div id="app">
 
-        <h1 v-if="user.age >= 18" class="good">Eres Mayor de edad</h1>
-        <h1 v-else= "user.age <= 18" class="error">Eres menor de edad</h1>
+        <h1 v-if="user.age <= 0 || user.age > 118" class="rango_err">
+            Tu edad esta fuerda de rango, verificala
+        </h1>
+        <h1 v-else-if="user.age >= 18" class="good"></h1>
+      <!--  <h1 v-if="user.age >= 18 || user.age < 60" class="good">Eres Mayor de edad</h1>-->
+        <h1 v-else class="error">Eres menor de edad</h1> <!-- v-else puede quedar en blanco = v-else class="error"    -->
 
         <!--  <h1 :class="user.classValue">
             {{ user.age > 18 ? user.classValue = "good" : user.classValue = "error" }}

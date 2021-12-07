@@ -9,6 +9,7 @@
 }
 
 .rango_err {
-    color: orange;
-    font-size: 5rem;
+  color: red;
+  background-color: black;
+  font-size: 5rem;
 }
